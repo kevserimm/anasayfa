@@ -3,16 +3,28 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mouse Position Tracker for Card Spotlight Effect
+    // 1. Mouse & Touch Position Tracker for Card Spotlight Effect
     const cards = document.querySelectorAll('.nav-card');
+    const updateSpotlight = (card, clientX, clientY) => {
+        const rect = card.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    };
+
     cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        });
+        card.addEventListener('mousemove', (e) => updateSpotlight(card, e.clientX, e.clientY));
+        card.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches[0]) {
+                updateSpotlight(card, e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
+        card.addEventListener('touchmove', (e) => {
+            if (e.touches && e.touches[0]) {
+                updateSpotlight(card, e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
     });
 
     // 2. Floating Heart Background Particle System
@@ -41,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.speedX = Math.sin(Math.random() * Math.PI) * 0.5;
             this.opacity = Math.random() * 0.5 + 0.2;
             this.fadeSpeed = Math.random() * 0.002 + 0.001;
-            this.color = ['#ff4b72', '#a855f7', '#ec4899', '#ff758c'][Math.floor(Math.random() * 4)];
+            this.color = ['#ff4b72', '#a855f7', '#ec4899', '#ff758c', '#06b6d4', '#10b981'][Math.floor(Math.random() * 6)];
         }
 
         update() {
