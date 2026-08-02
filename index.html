@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizim Dünyamız - Özel Köşemiz</title>
+    <meta name="description" content="Aşkımızla dokuduğumuz en güzel anlar, mısralar ve masallar tek bir yerde.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Dynamic Glow Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Background Canvas for Floating Particle Effects -->
+    <canvas id="heartCanvas"></canvas>
+
+    <div class="container">
+        <header class="main-header">
+            <div class="badge" id="welcome-badge">
+                <i class="fa-solid fa-sparkles"></i> Hoş Geldin Sevgilim <i class="fa-solid fa-sparkles"></i>
+            </div>
+            <h1 class="main-title">Bizim Dünyamız</h1>
+            <p class="subtitle">Aşkımızla dokuduğumuz en güzel anlar, mısralar ve masallar tek bir yerde...</p>
+        </header>
+
+        <main class="grid-container">
+            <!-- Card 1: Seni Seviyorum -->
+            <a href="https://kevserimm.github.io/seniseviyorum/" class="nav-card" id="card-seniseviyorum"
+                target="_blank" rel="noopener noreferrer">
+                <div class="card-glow red-glow"></div>
+                <div class="card-icon-wrapper red-theme">
+                    <i class="fa-solid fa-heart card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Aşk & Hisler</span>
+                    <h2 class="card-title">Seni Seviyorum</h2>
+                    <p class="card-desc">Kalbimden dökülen en içten sözler ve sana olan sonsuz sevgim.</p>
+                </div>
+                <div class="card-action">
+                    <span>Keşfet</span>
+                    <i class="fa-solid fa-arrow-right icon-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Card 2: Şiir -->
+            <a href="https://kevserimm.github.io/siir/" class="nav-card" id="card-siir" target="_blank"
+                rel="noopener noreferrer">
+                <div class="card-glow purple-glow"></div>
+                <div class="card-icon-wrapper purple-theme">
+                    <i class="fa-solid fa-feather-pointed card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Edebiyat & Duygular</span>
+                    <h2 class="card-title">Şiirler</h2>
+                    <p class="card-desc">Senin için kaleme alınmış buram buram romantizm kokan mısralar.</p>
+                </div>
+                <div class="card-action">
+                    <span>Oku</span>
+                    <i class="fa-solid fa-arrow-right icon-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Card 3: Love Game -->
+            <a href="https://kevserimm.github.io/lovegame/" class="nav-card" id="card-lovegame" target="_blank"
+                rel="noopener noreferrer">
+                <div class="card-glow pink-glow"></div>
+                <div class="card-icon-wrapper pink-theme">
+                    <i class="fa-solid fa-gamepad card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Eğlence & Oyun</span>
+                    <h2 class="card-title">Love Game</h2>
+                    <p class="card-desc">Birbirimize kavuştuğumuz oyun.</p>
+                </div>
+                <div class="card-action">
+                    <span>Oyna</span>
+                    <i class="fa-solid fa-arrow-right icon-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Card 4: Masalımız -->
+            <a href="https://kevserimm.github.io/masalimiz/" class="nav-card" id="card-masalimiz" target="_blank"
+                rel="noopener noreferrer">
+                <div class="card-glow amber-glow"></div>
+                <div class="card-icon-wrapper amber-theme">
+                    <i class="fa-solid fa-book-bookmark card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Hikayemiz</span>
+                    <h2 class="card-title">Masalımız</h2>
+                    <p class="card-desc">İlk günden bugüne yazılan, sonu hiç gelmeyecek güzel masalımız.</p>
+                </div>
+                <div class="card-action">
+                    <span>Adımla</span>
+                    <i class="fa-solid fa-arrow-right icon-arrow"></i>
+                </div>
+            </a>
+
+            <!-- Card 5: Güzelimin Takip Sitesi -->
+            <a href="https://kevserimm.github.io/güzelimintakipsitesi/" class="nav-card" id="card-takip" target="_blank"
+                rel="noopener noreferrer">
+                <div class="card-glow cyan-glow"></div>
+                <div class="card-icon-wrapper cyan-theme">
+                    <i class="fa-solid fa-compass card-icon"></i>
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Takip & Özel</span>
+                    <h2 class="card-title">Güzelimin Takip Sitesi</h2>
+                    <p class="card-desc">Güzelimin takibi ve ona özel anlık güncellemelerimiz.</p>
+                </div>
+                <div class="card-action">
+                    <span>Görüntüle</span>
+                    <i class="fa-solid fa-arrow-right icon-arrow"></i>
+                </div>
+            </a>
+        </main>
+
+        <footer class="main-footer">
+            <p>Sonsuza dek sevgiyle... ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
